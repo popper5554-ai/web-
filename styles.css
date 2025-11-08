@@ -1,0 +1,32 @@
+:root{
+  --accent:#1f6feb;
+  --bg:#f8fafc;
+  --card:#fff;
+  --muted:#6b7280;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Segoe UI,Arial; margin:0; background:var(--bg); color:#111}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+.site-header{background:#fff;border-bottom:1px solid #e6e9ee}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.site-header h1{margin:0;font-size:1.1rem}
+.site-header nav a{margin-left:1rem;color:var(--muted);text-decoration:none}
+.hero{padding:2rem 0}
+.hero h2{margin:0 0 .5rem}
+.products .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}
+.card{background:var(--card);padding:1rem;border:1px solid #e6e9ee;border-radius:8px}
+.card img{width:100%;height:160px;object-fit:cover;border-radius:6px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:.6rem 1rem;border-radius:6px;text-decoration:none;border:none;cursor:pointer}
+.contact form{display:grid;gap:.6rem;max-width:640px}
+label{display:flex;flex-direction:column;font-size:.9rem}
+input, textarea{padding:.6rem;border:1px solid #d1d5db;border-radius:6px}
+.checkbox{flex-direction:row;align-items:center;gap:.5rem}
+.disclaimer{font-size:.85rem;color:var(--muted)}
+.site-footer{padding:1rem 0;text-align:center;color:var(--muted)}
+.note{background:#fff;padding:1rem;border-radius:8px;border:1px solid #f0f3f6}
+
+/* tabs */
+.tabs{margin:1rem 0;display:flex;gap:.5rem}
+.small-tab{padding:.4rem .8rem;border-radius:6px;border:1px solid #e6e9ee;background:#fff;cursor:pointer}
+.small-tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.hidden{display:none}
