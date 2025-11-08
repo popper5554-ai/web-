@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ranger Arms — Online Store</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Ranger Arms</h1>
+      <nav class="main-nav">
+        <a href="#shop" data-tab="pistols" class="tablink active">Pistols (Glock)</a>
+        <a href="#shop" data-tab="accessories" class="tablink">Accessories & Legal Parts</a>
+        <a href="#how">How Transfers Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="hero" class="hero">
+      <h2>Trusted firearms, transparent transfers</h2>
+      <p>We sell firearms and accessories online and transfer through licensed dealers. All sales comply with federal and state laws.</p>
+      <a class="btn" href="#shop" onclick="showTab('pistols')">Shop Glock Pistols</a>
+    </section>
+
+    <section id="shop" class="products">
+      <h3>Shop</h3>
+
+      <div class="tabs">
+        <button class="small-tab active" onclick="showTab('pistols')">Pistols (Glock)</button>
+        <button class="small-tab" onclick="showTab('accessories')">Accessories & Legal Parts</button>
+      </div>
+
+      <div id="pistols" class="tab-panel">
+        <div class="grid" id="productGrid"></div>
+      </div>
+
+      <div id="accessories" class="tab-panel hidden">
+        <div class="card">
+          <h4>Important legal notice about digital files / blueprints</h4>
+          <p><strong>We will not list, host, or distribute digital files, blueprints, or instructions that enable manufacture of unserialized firearms.</strong> Creating or sharing such materials can be illegal and unsafe. If you were hoping to find "ghost gun" prints here — we cannot help with that.</p>
+
+          <h5>Safer, legal alternatives we offer</h5>
+          <ul>
+            <li>Serialized receivers and complete pistols sold through lawful transfer to a licensed FFL.</li>
+            <li>Accessories: holsters, magazines (where legal), sights, cases, and maintenance gear.</li>
+            <li>Assistance arranging transfer to a local FFL for background checks and Form 4473 paperwork.</li>
+          </ul>
+
+          <p>If you need parts or accessories listed for sale here, we can add them — all will follow applicable laws and transfer requirements.</p>
+        </div>
+
+        <div class="grid" id="accessoryGrid"></div>
+      </div>
+    </section>
+
+    <section id="how" class="how">
+      <h3>How transfers work</h3>
+      <ol>
+        <li>Place a deposit or request a quote online.</li>
+        <li>We ship to your local FFL or you provide an FFL of your choice.</li>
+        <li>Complete required ID and background check at the FFL before pickup.</li>
+      </ol>
+      <p class="note">By law we cannot ship firearms to private individuals in jurisdictions that require FFL transfers. You must present valid ID and pass a background check at the FFL transfer location.</p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h3>Request a purchase / deposit</h3>
+      <form id="orderForm">
+        <label>Full name<input name="name" required /></label>
+        <label>Email<input name="email" type="email" required /></label>
+        <label>Phone<input name="phone" type="tel" required /></label>
+        <label>DOB (mm/dd/yyyy)<input name="dob" placeholder="MM/DD/YYYY" required /></label>
+        <label>Pickup FFL (if known) — name & address<input name="ffl" /></label>
+        <label>Item SKU<input name="sku" id="skuInput" required /></label>
+
+        <label class="checkbox">
+          <input type="checkbox" name="ack" required />
+          I understand transfers are performed via a licensed FFL and that I must complete required ID & background checks at the FFL.
+        </label>
+
+        <button type="submit" class="btn">Request Purchase / Deposit</button>
+        <p class="disclaimer">This form collects a purchase request only — no firearm will be shipped to a private address. We will contact you to arrange FFL transfer and final payment.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; Ranger Arms — sample store. Verify local laws and our policies before purchase.</small>
+    </div>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
